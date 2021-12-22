@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+.general {
+  display: flex;
+  flex-direction: column;
+}
+
+.general--form {
+  display: flex;
+  flex-direction: column;
+}

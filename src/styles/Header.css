@@ -1,0 +1,12 @@
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  color: #e0fbfc;
+  justify-content: center;
+  background-color: #3d5a80;
+  width: 100%;
+}

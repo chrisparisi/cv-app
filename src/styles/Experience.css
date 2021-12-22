@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience--form {
+  display: flex;
+  flex-direction: column;
+}

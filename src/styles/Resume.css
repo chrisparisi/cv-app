@@ -1,0 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
+.resume {
+  display: flex;
+  flex-direction: column;
+}

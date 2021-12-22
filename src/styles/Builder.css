@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+}
+
+ResumeForm {
+  width: 50%;
+}
+
+Resume {
+  width: 50%;
+}
