@@ -3,13 +3,15 @@
 }
 
 .container {
+  width: 100%;
   display: flex;
 }
 
-ResumeForm {
-  width: 50%;
+.resumeForm {
+  width: 100%;
+  background-color: aqua;
 }
 
-Resume {
-  width: 50%;
+.resume {
+  width: 100%;
 }

@@ -12,38 +12,43 @@ export default function Experience(props) {
             <h3>Experience</h3>
             <form className="experience--form" onSubmit={handleSubmit}>
                 <input
+                    id={props.jobs.id}
                     type="text" 
                     name="company"
                     placeholder="Company Name"
-                    onChange={props.handleChange}
+                    onChange={(event) => props.handleJobs(event, props.jobs.id)}
                     value={props.jobs.company}
                 />
                 <input
+                    id={props.jobs.id}
                     type="text" 
                     name="position"
                     placeholder="Job Title"
-                    onChange={props.handleChange}
+                    onChange={(event) => props.handleJobs(event, props.jobs.id)}
                     value={props.jobs.position}
                 />
                 <input
+                    id={props.jobs.id}
                     type="text" 
                     name="mainTasks"
                     placeholder="Main Tasks"
-                    onChange={props.handleChange}
+                    onChange={(event) => props.handleJobs(event, props.jobs.id)}
                     value={props.jobs.mainTasks}
                 />
                 <input
+                    id={props.jobs.id}
                     type="text" 
                     name="startDate"
                     placeholder="Start Date"
-                    onChange={props.handleChange}
+                    onChange={(event) => props.handleJobs(event, props.jobs.id)}
                     value={props.jobs.startDate}
                 />
                 <input
+                    id={props.jobs.id}
                     type="text" 
                     name="endDate"
                     placeholder="End Date"
-                    onChange={props.handleChange}
+                    onChange={(event) => props.handleJobs(event, props.jobs.id)}
                     value={props.jobs.endDate}
                 />
             </form>

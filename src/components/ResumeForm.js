@@ -21,6 +21,7 @@ export default function ResumeForm(props) {
             <Experience
                 jobs={props.jobs}
                 handleChange={props.handleChange}
+                handleJobs={props.handleJobs}
             />
         </div>
     )

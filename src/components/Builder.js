@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import "../styles/Builder.css"
 import ResumeForm from "./ResumeForm";
 import Resume from "./Resume";
+import { v4 as uuidv4 } from 'uuid';
 
 export default function Builder() {
 
@@ -15,6 +16,7 @@ export default function Builder() {
             graduationDate: "",
             jobs: [
                     {
+                        id: uuidv4(),
                         company: "",
                         position: "",
                         mainTasks: "",
@@ -36,9 +38,24 @@ export default function Builder() {
         console.log(formData)
     }
 
+    function handleJobs(event, id) {
+        const { name, value } = event.target
+
+        setFormData((prevState) => {
+            const newJob = prevState.jobs.map((job) => {
+                if (job.id === id) {
+                    return { ...job, [name]: value }
+                    }
+                return job
+                })
+                return {...prevState, job: [...newJob]}
+        })
+        console.log(formData)
+    }
+
     return (
         <div className="container">
-            <ResumeForm 
+            <ResumeForm
                 name={formData.name}
                 email={formData.email}
                 phone={formData.phone}
@@ -47,8 +64,9 @@ export default function Builder() {
                 graduationDate={formData.graduationDate}
                 jobs={formData.jobs}
                 handleChange={handleChange}
+                handleJobs={handleJobs}
             />
-            <Resume 
+            <Resume
                 name={formData.name}
                 email={formData.email}
                 phone={formData.phone}
@@ -56,7 +74,6 @@ export default function Builder() {
                 degree={formData.degree}
                 graduationDate={formData.graduationDate}
                 jobs={formData.jobs}
-                onChange={handleChange}
             />
         </div>
     )
